@@ -1,0 +1,131 @@
+/* Container for the whole authentication section */
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffdee9;
+  background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
+  padding: 20px;
+}
+
+/* Flexbox wrapper for the form and video */
+.auth-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Add gap for space between form and video */
+  width: 80%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Form container on the left side */
+.form-container {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 20px; /* Add margin for space at bottom */
+}
+
+/* Form styling */
+.form-container form {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container form .title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.form-container form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid #000;
+  background-color: #f9f9f9;
+  outline: none;
+}
+
+.form-container form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.form-container form button:hover {
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.forgot-btn {
+  background-color: #434343a4 !important;
+  border: 0 !important;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.forgot-btn:hover {
+  color: white !important;
+}
+
+/* Video/Image container on the right side */
+.image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  padding: 20px; /* Add padding to the video/image container */
+}
+
+.image-container video, .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .auth-content {
+    flex-direction: column;
+  }
+
+  .image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container form .title {
+    font-size: 20px;
+  }
+
+  .image-container video {
+    height: 150px;
+  }
+}
