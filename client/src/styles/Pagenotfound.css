@@ -1,0 +1,95 @@
+/* Styling for Page Not Found */
+.pnf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Flex container for the 404 digits */
+  .pnf-404 {
+    display: flex;
+    gap: 10px;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #ff6b6b;
+  }
+  
+  /* Animate the digits one by one with continuous movement */
+  .digit {
+    display: inline-block;
+    animation: move 3s infinite ease-in-out;
+  }
+  
+  .digit:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .digit:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .digit:nth-child(3) {
+    animation-delay: 2s;
+  }
+  
+  /* Keyframes for continuous movement (up and down) */
+  @keyframes move {
+    0%, 100% {
+      transform: translateY(0); /* Starting position */
+    }
+    50% {
+      transform: translateY(-30px); /* Move up */
+    }
+  }
+  
+  /* Text animations */
+  .pnf-text {
+    font-size: 2.5rem;
+    color: #2f3542;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out forwards 3s;
+  }
+  
+  .pnf-description {
+    font-size: 1.2rem;
+    color: #57606f;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out forwards 3.5s;
+  }
+  
+  .pnf-btn {
+    padding: 12px 25px;
+    background-color: #ff4757;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-in-out forwards 4s;
+  }
+  
+  .pnf-btn:hover {
+    background-color: #e84118;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #e84118, 0 0 20px #ff4757;
+  }
+  
+  /* Fade-in effect for text elements */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
