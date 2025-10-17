@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"; // ✅ Add this import
 
 const CategoryForm = ({ handleSubmit, value, setValue }) => {
   return (
@@ -20,6 +21,13 @@ const CategoryForm = ({ handleSubmit, value, setValue }) => {
       </form>
     </>
   );
+};
+
+// Prop validation to fix SonarQube issue
+CategoryForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  setValue: PropTypes.func.isRequired,
 };
 
 export default CategoryForm;
