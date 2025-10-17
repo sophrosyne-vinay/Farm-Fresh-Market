@@ -90,7 +90,7 @@ const HomePage = () => {
       setLoading(true);
       const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
-      setProducts([...products, ...data?.products]);
+      setProducts([...products, ...(data?.products ?? [])]);
     } catch (error) {
       console.error("Error loading more products:", error);
       setLoading(false);
