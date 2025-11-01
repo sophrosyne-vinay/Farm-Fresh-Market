@@ -13,6 +13,9 @@ import path from 'path';
 // Configure environment variables
 dotenv.config();
 
+// Disable 'X-Powered-By' header (fixes SonarQube warning)
+app.disable('x-powered-by');
+
 // Create Express app
 const app = express();
 
